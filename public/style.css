@@ -1,0 +1,19 @@
+body{
+    background:rgb(245, 154, 8);
+}
+
+.mapdiv{
+   width: inherit;
+}
+
+.mapdiv path {
+    fill: #313131;
+    stroke: #4d4c4b;
+    stroke-width:1px;
+    transition: fill 0.3s;
+}
+
+.mapdiv :hover {
+    fill:#000;
+    visibility: visible;
+}
