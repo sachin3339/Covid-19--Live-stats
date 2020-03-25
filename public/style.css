@@ -7,13 +7,13 @@ body{
 }
 
 .mapdiv path {
-    fill: #313131;
+    fill: #dda1a1;
     stroke: #4d4c4b;
     stroke-width:1px;
     transition: fill 0.3s;
 }
 
 .mapdiv :hover {
-    fill:#000;
+    fill:rgb(223, 14, 14);
     visibility: visible;
 }
