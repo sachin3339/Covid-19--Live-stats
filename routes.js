@@ -24,7 +24,7 @@ module.exports=(app)=>
                 console.log(err);
             });
 
-        res.render('map',{count:cases})
+        res.render('worldmap',{count:cases})
     })
    
     
