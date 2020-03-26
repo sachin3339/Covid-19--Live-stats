@@ -1,8 +1,11 @@
 const express = require('express');
 const app=express();
 const fetch = require("node-fetch");
- var cases=0;
-module.exports=(app)=>
+ var cases=[];
+ var death=[];
+ var serious=[];
+ var recovered=[]; 
+ module.exports=(app)=>
 {
     app.get('/home',(req,res)=>{
 
@@ -15,16 +18,22 @@ module.exports=(app)=>
         })
         .then(response => response.json().then(data =>{
             let countries_stat = data.countries_stat;
-            
-        cases=countries_stat[0].cases;
-        console.log(cases);
+            for(let i = 0; i<countries_stat.length;i++){
+                // console.log(countries_stat[i]);
+                cases[i] = countries_stat[i].cases
+                death[i] = countries_stat[i].deaths
+                serious[i] = countries_stat[i].serious_critical
+                recovered[i] = countries_stat[i].recovered_per_country
+            }
+       
         
         }))
             .catch(err => {
                 console.log(err);
             });
-
-        res.render('worldmap',{count:cases})
+           
+        res.render('world',{count:cases})
+        
     })
    
     

@@ -37,7 +37,7 @@ body{
 }
 
 .box_wrapper .box{
-    background-color: #df3333;
+    background-color: #ff677d;
     box-shadow: 2px 2px 8px rgba(30,30,30,.2);
     margin: 10px 15px;
     width:25%;
@@ -60,7 +60,7 @@ table{
     border-spacing: 0;
 }
 tr:first-child{
-    background-color: #16a5ec;
+    background-color: #424040;
     color: #fafafa;
     text-transform: uppercase;
 }
@@ -71,12 +71,12 @@ th{
     
 }
 tr:nth-child(even){
-    background-color: #35c20a;
+    background-color: #ffc7c7;
     
     
 }
 tr:nth-child(odd){
-    background-color: #b40eb4;
+    background-color: #0c7b93;
     color: #fafafa;
 }
 tr td{

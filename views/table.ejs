@@ -59,6 +59,7 @@
            </table>
         </div>
     </div>
+    
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
@@ -86,7 +87,7 @@ fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php", {
     }
 })
 .then(response => response.json().then( data => {
-    console.log(data);
+    // console.log(data);
     total_cases.innerHTML = data.total_cases;
     new_cases.innerHTML = data.new_cases;
     new_death.innerHTML = data.new_deaths;
@@ -106,11 +107,11 @@ fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.p
     }
 })
 .then(response => response.json().then(data =>{
-    console.log(data)
+    // console.log(data)
     let countries_stat = data.countries_stat;
 //Getting all the country statistic using a loop
     for(let i = 0; i<countries_stat.length;i++){
-        console.log(countries_stat[i]);
+        // console.log(countries_stat[i]);
         //we will start by inserting the new rows inside our table
         let row = table.insertRow(i+1);
         let country_name = row.insertCell(0);
